@@ -12,6 +12,8 @@
 		E620BE3D1C9B8FA70036F587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E620BE3B1C9B8FA70036F587 /* Main.storyboard */; };
 		E620BE3F1C9B8FA70036F587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E620BE3E1C9B8FA70036F587 /* Assets.xcassets */; };
 		E620BE421C9B8FA70036F587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E620BE401C9B8FA70036F587 /* LaunchScreen.storyboard */; };
+		E620BE4B1C9B8FFC0036F587 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E620BE491C9B8FFC0036F587 /* FBSDKCoreKit.framework */; };
+		E620BE4C1C9B8FFC0036F587 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E620BE4A1C9B8FFC0036F587 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		E620BE3E1C9B8FA70036F587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E620BE411C9B8FA70036F587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E620BE431C9B8FA70036F587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E620BE491C9B8FFC0036F587 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E620BE4A1C9B8FFC0036F587 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E620BE4D1C9B903F0036F587 /* TrailBuds-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrailBuds-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E620BE4C1C9B8FFC0036F587 /* FBSDKLoginKit.framework in Frameworks */,
+				E620BE4B1C9B8FFC0036F587 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +67,9 @@
 				E620BE3E1C9B8FA70036F587 /* Assets.xcassets */,
 				E620BE401C9B8FA70036F587 /* LaunchScreen.storyboard */,
 				E620BE431C9B8FA70036F587 /* Info.plist */,
+				E620BE491C9B8FFC0036F587 /* FBSDKCoreKit.framework */,
+				E620BE4A1C9B8FFC0036F587 /* FBSDKLoginKit.framework */,
+				E620BE4D1C9B903F0036F587 /* TrailBuds-Bridging-Header.h */,
 			);
 			path = TrailBuds;
 			sourceTree = "<group>";
@@ -249,10 +259,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TrailBuds",
+				);
 				INFOPLIST_FILE = TrailBuds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.garikkosai.TrailBuds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrailBuds/TrailBuds-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +277,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TrailBuds",
+				);
 				INFOPLIST_FILE = TrailBuds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.garikkosai.TrailBuds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrailBuds/TrailBuds-Bridging-Header.h";
 			};
 			name = Release;
 		};
